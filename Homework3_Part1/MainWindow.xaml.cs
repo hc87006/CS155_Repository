@@ -62,6 +62,7 @@ namespace Homework3_Part1
 
                 {
                     string pigLatinLastName = englishLastName.Substring(1, 1).ToUpper() + englishLastName.Substring(2) + englishLastName.Substring(0, 1).ToLower() + "ay";
+                    
                     lastNameOutputBlock.Text = pigLatinLastName;
                 }
 
