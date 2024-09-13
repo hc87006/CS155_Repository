@@ -1,5 +1,5 @@
 ﻿/// Homework No.3 Exercise No.1 
-/// File Name:     PigLatinTranslator.cs 
+/// File Name:     MainWindow.cs 
 /// @author:       Haydn Christian
 /// Date:          Sep. 9, 2024
 ///  
