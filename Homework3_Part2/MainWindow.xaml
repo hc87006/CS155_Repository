@@ -1,0 +1,21 @@
+﻿<Window x:Class="Homework3_Part2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Homework3_Part2"
+        mc:Ignorable="d"
+        Title="ChangeDispenser" Height="450" Width="800">
+    <Grid>
+        <TextBlock x:Name="AppNameBlock" HorizontalAlignment="Center" Margin="0,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="100"><Run Text="Change Dispenser"/><LineBreak/><Run/></TextBlock>
+        <TextBox x:Name="ChangeInputBox" HorizontalAlignment="Left" Margin="100,150,0,0" TextWrapping="Wrap" Text="Input amount" VerticalAlignment="Top" Height="20" KeyDown="ChangeInputBox_KeyDown"/>
+        <TextBlock x:Name="InputPromptLabel" HorizontalAlignment="Left" Margin="100,125,0,0" TextWrapping="Wrap" Text="Input amount in 5-cent increments (min 25 max 100)" VerticalAlignment="Top" Height="20" Width="280"/>
+        <TextBlock x:Name="OutputLabel" HorizontalAlignment="Left" Margin="600,125,0,0" TextWrapping="Wrap" Text="Output:" VerticalAlignment="Top" Height="20" Width="41"/>
+        <TextBlock x:Name="QuartersLabel" HorizontalAlignment="Left" Margin="545,150,0,0" TextWrapping="Wrap" Text="Quarters:" VerticalAlignment="Top" Height="20" Width="50" TextAlignment="Right"/>
+        <TextBlock x:Name="NicklesLabel" HorizontalAlignment="Left" Margin="545,175,0,0" TextWrapping="Wrap" Text="Nickles:" VerticalAlignment="Top" Height="20" Width="50" TextAlignment="Right"/>
+        <TextBlock x:Name="DimesLabel" HorizontalAlignment="Left" Margin="545,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="50" TextAlignment="Right"><Run Text="Dimes"/><Run Text=":"/></TextBlock>
+        <TextBlock x:Name="QuartersOutput" HorizontalAlignment="Left" Margin="600,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="20" Width="10" TextAlignment="Center"/>
+        <TextBlock x:Name="NicklesOutput" HorizontalAlignment="Left" Margin="600,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="20" Width="10" TextAlignment="Center"/>
+        <TextBlock x:Name="DimesOutput" HorizontalAlignment="Left" Margin="600,200,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="20" Width="10" TextAlignment="Center"/>
+    </Grid>
+</Window>
