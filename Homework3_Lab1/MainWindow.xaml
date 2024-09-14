@@ -10,7 +10,7 @@
         <TextBlock x:Name="ProgramLabel" HorizontalAlignment="Center" Margin="0,50,0,0" TextWrapping="Wrap" Text="Outstanding Mortgage:" VerticalAlignment="Top"/>
         <TextBlock x:Name="Balance" HorizontalAlignment="Left" Margin="123,155,0,0" TextWrapping="Wrap" Text="Balance:" VerticalAlignment="Top" Height="20"/>
         <TextBlock x:Name="Interest" HorizontalAlignment="Left" Margin="123,139,0,0" TextWrapping="Wrap" Text="Interest: 6.39%" VerticalAlignment="Top"/>
-        <TextBox x:Name="BalanceTextBox" HorizontalAlignment="Left" Margin="166,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="20" KeyDown="BalanceTextBox_KeyDown" TextChanged="BalanceTextBox_TextChanged"/>
+        <TextBox x:Name="BalanceTextBox" HorizontalAlignment="Left" Margin="166,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="20" KeyDown="BalanceTextBox_KeyDown"/>
         <TextBlock x:Name="NewBalanceLabel" HorizontalAlignment="Left" Margin="413,139,0,0" TextWrapping="Wrap" Text="New Balance:" VerticalAlignment="Top"/>
         <TextBlock x:Name="IntrestPaidLabel" HorizontalAlignment="Left" Margin="413,155,0,0" TextWrapping="Wrap" Text="Intrest Paid:" VerticalAlignment="Top"/>
         <TextBlock x:Name="PrincipalLabel" HorizontalAlignment="Left" Margin="413,171,0,0" TextWrapping="Wrap" Text="Principal:" VerticalAlignment="Top"/>
