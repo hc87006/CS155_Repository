@@ -1,0 +1,24 @@
+﻿<Window x:Class="Homework4_Part1.BMI_Calculator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Homework4_Part1"
+        mc:Ignorable="d"
+        Title="BMI Calculator" Height="450" Width="800">
+    <Grid>
+        <TextBlock x:Name="App_Label" HorizontalAlignment="Center" Margin="0,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Text="BMI Calculator" Width="156" Height="30"/>
+        <TextBlock x:Name="WeightLabel" HorizontalAlignment="Left" Margin="175,150,0,0" TextWrapping="Wrap" Text="Weight:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="HeightLabel" HorizontalAlignment="Left" Margin="175,200,0,0" TextWrapping="Wrap" Text="Height:" VerticalAlignment="Top"/>
+        <TextBox x:Name="HeightBox" HorizontalAlignment="Left" Margin="220,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyDown="HeightBox_KeyDown" TextChanged="HeightBox_TextChanged"/>
+        <TextBox x:Name="WeightBox" HorizontalAlignment="Left" Margin="220,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyDown="WeightBox_KeyDown" TextChanged="WeightBox_TextChanged"/>
+        <TextBlock x:Name="HeightValue" HorizontalAlignment="Left" Margin="351,200,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <TextBlock x:Name="WeightValue" HorizontalAlignment="Left" Margin="351,150,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <TextBlock x:Name="BMI_Display" HorizontalAlignment="Left" Margin="516,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Text="0"/>
+        <CheckBox x:Name="WeightCheck" HorizontalAlignment="Left" Margin="364,151,0,0" VerticalAlignment="Top" Height="16" Width="16" IsHitTestVisible="False"/>
+        <CheckBox x:Name="HeightCheck" HorizontalAlignment="Left" Margin="364,201,0,0" VerticalAlignment="Top" Height="16" Width="16" IsHitTestVisible="False"/>
+        <Button x:Name="CalculateButton" HorizontalAlignment="Left" Margin="402,171,0,0" VerticalAlignment="Top" Content="Calculate BMI" Click="CalculateButtonClick"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,107,0,0" TextWrapping="Wrap" Text="Enter your weight (in pounds) and height (in inches). Press enter after each entry." VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
