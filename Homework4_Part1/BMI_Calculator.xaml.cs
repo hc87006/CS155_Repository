@@ -1,14 +1,21 @@
-﻿using System.Configuration;
-using System.Text;
+﻿/// Homework No.4  Exercise No.1
+/// File Name:     BMI_Calculator.cs 
+/// @author:       Haydn Christian
+/// Date:          Sep. 21, 2024
+///  
+/// Problem Statement: use inputted height and weight to calculate BMI 
+///     
+/// Overall Plan (step-by-step, how you want the code to make it happen): 
+/// 1. Get height and weight from text boxes
+/// 2. Calculate and display BMI
+/// 3. Change color depending on below, in, or above healthy BMI range
+/// 
+/// Classes needed and Purpose (BMI_Calculator : Window) 
+/// main class - BMI_Calculator : Window  
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Homework4_Part1
 {
