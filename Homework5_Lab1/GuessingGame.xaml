@@ -1,0 +1,16 @@
+﻿<Window x:Class="Homework5_Lab1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Homework5_Lab1"
+        mc:Ignorable="d"
+        Title="Guessing Game" Height="300" Width="600" MaxHeight="300" MinHeight="300" MaxWidth="600" MinWidth="600">
+    <Grid>
+        <TextBox x:Name="GuessBox" HorizontalAlignment="Left" Margin="109,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <Button x:Name="GuessButton" Content="Guess" HorizontalAlignment="Center" VerticalAlignment="Center" Click="GuessButton_Click"/>
+        <TextBlock x:Name="GuessOutput" HorizontalAlignment="Left" Margin="363,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Text="Guess a number between 1 and 100"/>
+        <TextBlock x:Name="GuessBlock" HorizontalAlignment="Center" Margin="0,167,0,0" TextWrapping="Wrap" Text="Guesses: " VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
