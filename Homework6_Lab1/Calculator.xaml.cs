@@ -1,13 +1,19 @@
-﻿using System.Text;
+﻿/// Homework No.6  Exercise No.2
+/// File Name:     Calculator.xaml.cs
+/// @author:       Haydn Christian
+/// Date:          Oct. 5, 2024
+///  
+/// Problem Statement: Calculate math problems based on user input, catch /0 exception
+///     
+/// Overall Plan (step-by-step, how you want the code to make it happen): 
+/// 1. Get user input for left and right inputs from text boxes
+/// 2. Get user input for operation type from list
+/// 3. Calculate result, catch divide by 0 exception if needed
+/// 
+/// Classes needed and Purpose (MainWindow) 
+/// main class - MainWindow
+
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Homework6_Lab1
 {
