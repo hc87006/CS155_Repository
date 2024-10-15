@@ -10,13 +10,13 @@ namespace Homework6_Part1
             Counter counter = new Counter();
             counter.setValue(0);
 
-            Console.WriteLine("Menu:\nIncrement\nDecrement\nDisplay\nExit\n");
+            Console.WriteLine("Menu:\nIncrement\nDecrement\nEquals\nReset\nExit\n");
 
             while (currentCommand == "waiting")
             {
                 currentCommand = Console.ReadLine();
 
-                if (currentCommand == "Display")
+                if (currentCommand == "Equals")
                 {
                     Console.WriteLine(counter.toString());
                     currentCommand = "waiting";
@@ -27,7 +27,19 @@ namespace Homework6_Part1
                     counter.Increment();
                     currentCommand = "waiting";
                 }
-                
+
+                else if (currentCommand == "Decrement")
+                {
+                    counter.Decrement();
+                    currentCommand = "waiting";
+                }
+
+                else if (currentCommand == "Reset")
+                {
+                    counter.Reset();
+                    currentCommand = "waiting";
+                }
+
                 else if (currentCommand == "Exit")
                 {
                     break;

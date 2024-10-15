@@ -16,6 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -43,13 +44,28 @@ namespace Homework6_Part1
 
         public int Decrement()
         {
-            value--;
+            if (value == 0)
+            {
+                Console.WriteLine("Value cannot be less than 0");
+                return value;
+            }
+            else
+            {
+                value--;
+            }
+
             return value;
         }
 
         public string toString()
         {
             return "\nYour current value is " + value + "\n";
+        }
+
+        public string Reset()
+        {
+            value = 0;
+            return "\nYour value has been reset to " + value + "\n";
         }
     }
 
