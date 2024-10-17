@@ -1,18 +1,17 @@
 ﻿/// Homework No. 8 Exercise No.1
-/// File Name:     program.cs 
+/// File Name:     Program.cs 
 /// @author:       Haydn Christian
 /// Date:          Oct. 15, 2024
 ///  
 /// Problem Statement: (Create an Odometer) 
 ///     
 /// Overall Plan (step-by-step, how you want the code to make it happen): 
-/// 1. 
-/// 2. 
-/// 3. 
-/// etc. 
+/// 1. Calculate miles per gallon
+/// 2. Display miles, fuel used, and miles per gallon
+/// 3. Reset miles and fuel used
 /// 
-/// Classes needed and Purpose (Input, Processing, Output) 
-/// main class - GoodTime  
+/// Classes needed and Purpose (Odometer, Program) 
+/// main class - Odometer
 
 using System;
 
