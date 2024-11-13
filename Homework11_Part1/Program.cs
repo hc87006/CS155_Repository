@@ -49,11 +49,10 @@ class Program
         private int count;
         private string name;
 
-        public NameInfo(int rank, int count, string name)
+        public NameInfo(int rank, int count)
         {
             this.rank = rank;
             this.count = count;
-            this.name = name;
         }
 
         public int GetRank()
@@ -79,7 +78,7 @@ class Program
             string name = parts[0];
             rank++;
             int count = int.Parse(parts[1]);
-            NameInfo info = new NameInfo(rank, count, name);
+            NameInfo info = new NameInfo(rank, count);
             names.Add(name, info);
             line = reader.ReadLine();
         }
