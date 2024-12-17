@@ -7,10 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="game.txt" />
-    <None Remove="part1.txt" />
-    <None Remove="part2ttt.txt" />
-  </ItemGroup>
-
 </Project>
