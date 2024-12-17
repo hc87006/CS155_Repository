@@ -1,0 +1,88 @@
+        string player1choice = "";
+        string player2choice = "";
+        string command = "";
+
+        string item1 = "rock";
+        string item2 = "paper";
+        string item3 = "scissors";
+
+        List<string> score = new List<string>();
+
+        while (true)
+        {
+            Console.WriteLine($"{item1}, {item2}, {item3}");
+
+            Console.WriteLine("Player 1, enter your choice: ");
+
+            while (player1choice != item1 && player1choice != item2 && player1choice != item3)
+            {
+                command = Console.ReadLine().ToLower();
+
+                if (command == item1 || command == item2 || command == item3)
+                {
+                    player1choice = command;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid choice. Please enter rock, paper, or scissors.");
+                }
+            }
+
+            Console.Clear();
+
+            Console.WriteLine("Player 2, enter your choice: ");
+
+            while (player2choice != item1 && player2choice != item2 && player2choice != item3)
+            {
+                command = Console.ReadLine().ToLower();
+
+                if (command == item1 || command == item2 || command == item3)
+                {
+                    player2choice = command;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid choice. Please enter rock, paper, or scissors.");
+                }
+            }
+
+            Console.Clear();
+
+            Console.WriteLine($"Player 1 chose {player1choice}.");
+            Console.WriteLine($"Player 2 chose {player2choice}.");
+
+            if (player1choice == player2choice)
+            {
+                Console.WriteLine("It's a tie!");
+                score.Add("tie");
+            }
+            else if (
+                player1choice == item1 && player2choice == item3 ||
+                player1choice == item2 && player2choice == item1 ||
+                player1choice == item3 && player2choice == item2)
+            {
+                Console.WriteLine("Player 1 wins!");
+                score.Add("player1");
+            }
+            else
+            {
+                Console.WriteLine("Player 2 wins!");
+                score.Add("player2");
+            }
+
+            player1choice = "";
+            player2choice = "";
+
+            Console.WriteLine("\nGame log:");
+
+            foreach (string result in score)
+            {
+                Console.WriteLine(result);
+            }
+
+            Console.WriteLine("\nPress enter to continue");
+            Console.ReadLine();
+            Console.Clear();
+        }
+    }
+}

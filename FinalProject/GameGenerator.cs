@@ -6,9 +6,17 @@ using System.Threading.Tasks;
 
 namespace FinalProject
 {
-    internal class GameGenerator
+    public abstract class GameGenerator
     {
-        private string OpeningPrompt;
+        protected string GameIntro;
 
+        public string GetGameIntro()
+        {
+            return GameIntro;
+        }
+
+        public abstract void RunCustomizationOptions();
+
+        public abstract void WriteGameFile();
     }
 }

@@ -53,9 +53,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework11_Part1", "Homewor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinalProject", "FinalProject\FinalProject.csproj", "{9680207E-3DE5-47F6-B698-ADFD4F4BA1C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework12_Part1", "Homework12_Part1\Homework12_Part1.csproj", "{5BA2F664-C474-41C4-83A3-052F668678DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework12_Part1", "Homework12_Part1\Homework12_Part1.csproj", "{5BA2F664-C474-41C4-83A3-052F668678DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework12_Lab1", "Homework12_Lab1\Homework12_Lab1.csproj", "{8E529A66-71EC-46A9-9DB1-C2EB078B148D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework12_Lab1", "Homework12_Lab1\Homework12_Lab1.csproj", "{8E529A66-71EC-46A9-9DB1-C2EB078B148D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NuGet Entity Framework", "NuGet Entity Framework\NuGet Entity Framework.csproj", "{2FA65E0C-551F-4875-84ED-0D6A8CAE72B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -171,6 +173,10 @@ Global
 		{8E529A66-71EC-46A9-9DB1-C2EB078B148D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E529A66-71EC-46A9-9DB1-C2EB078B148D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E529A66-71EC-46A9-9DB1-C2EB078B148D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FA65E0C-551F-4875-84ED-0D6A8CAE72B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FA65E0C-551F-4875-84ED-0D6A8CAE72B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FA65E0C-551F-4875-84ED-0D6A8CAE72B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FA65E0C-551F-4875-84ED-0D6A8CAE72B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,177 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        char[] sqr = new char[9] { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+        string command = "waiting";
+        List<string> score = new List<string>();
+
+        while (true)
+        {
+            Console.WriteLine("Tic Tac Toe");
+            int turn = 0;
+            while (CheckWin(sqr, score) == false)
+            {
+                if (turn == 9)
+                {
+                    Console.WriteLine("It's a tie!");
+                    score.Add("Tie");
+                    break;
+                }
+                else
+                {
+                    Player1Turn(sqr, command);
+                    turn++;
+                    if (CheckWin(sqr, score) == true)
+                    {
+                        break;
+                    }
+                }
+
+                if (turn == 9)
+                {
+                    Console.WriteLine("It's a tie!");
+                    score.Add("Tie");
+                    break;
+                }
+                else
+                {
+                    Player2Turn(sqr, command);
+                    turn++;
+                    if (CheckWin(sqr, score) == true)
+                    {
+                        break;
+                    }
+                }
+            }
+
+            ResetBoard(sqr);
+
+            Console.WriteLine("Press enter to continue");
+            Console.ReadLine();
+
+            Console.Clear();
+            Console.WriteLine("Game log:");
+            foreach (string result in score)
+            {
+                Console.WriteLine(result);
+            }
+            Console.WriteLine("\nPress enter to continue");
+            Console.ReadLine();
+            Console.Clear();
+        }
+    }
+
+    private static char player1char = 'X';
+    private static char player2char = 'O';
+
+    static void Player1Turn(char[] sqr, string command)
+    {
+        DrawBoard(sqr);
+        command = "waiting";
+        Console.WriteLine($"Player 1, enter a number between 1 and 9 to place your {player1char}");
+
+        while (command == "waiting")
+        {
+            command = Console.ReadLine();
+
+            if (int.Parse(command) > 0 && int.Parse(command) < 10)
+            {
+                if (sqr[int.Parse(command) - 1] != player1char && sqr[int.Parse(command) - 1] != player2char)
+                {
+                    sqr[int.Parse(command) - 1] = player1char;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid move, try again");
+                    command = "waiting";
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid move, try again");
+                command = "waiting";
+            }
+        }
+    }
+
+    static void Player2Turn(char[] sqr, string command)
+    {
+        DrawBoard(sqr);
+        command = "waiting";
+        Console.WriteLine("Player 2, enter a number between 1 and 9 to place your O");
+
+        while (command == "waiting")
+        {
+            command = Console.ReadLine();
+
+            if (int.Parse(command) > 0 && int.Parse(command) < 10)
+            {
+                if (sqr[int.Parse(command) - 1] != player1char && sqr[int.Parse(command) - 1] != player2char)
+                {
+                    sqr[int.Parse(command) - 1] = player2char;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid move, try again");
+                    command = "waiting";
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid move, try again");
+                command = "waiting";
+            }
+        }
+    }
+
+    static bool CheckWin(char[] sqr, List<string> score)
+    {
+        if (sqr[0] == player1char && sqr[1] == player1char && sqr[2] == player1char ||
+            sqr[3] == player1char && sqr[4] == player1char && sqr[5] == player1char ||
+            sqr[6] == player1char && sqr[7] == player1char && sqr[8] == player1char ||
+            sqr[0] == player1char && sqr[3] == player1char && sqr[6] == player1char ||
+            sqr[1] == player1char && sqr[4] == player1char && sqr[7] == player1char ||
+            sqr[2] == player1char && sqr[5] == player1char && sqr[8] == player1char ||
+            sqr[0] == player1char && sqr[4] == player1char && sqr[8] == player1char ||
+            sqr[2] == player1char && sqr[4] == player1char && sqr[6] == player1char)
+        {
+            Console.WriteLine("Player 1 wins!");
+            score.Add("player1");
+            return true;
+        }
+        else if (sqr[0] == player2char && sqr[1] == player2char && sqr[2] == player2char ||
+                 sqr[3] == player2char && sqr[4] == player2char && sqr[5] == player2char ||
+                 sqr[6] == player2char && sqr[7] == player2char && sqr[8] == player2char ||
+                 sqr[0] == player2char && sqr[3] == player2char && sqr[6] == player2char ||
+                 sqr[1] == player2char && sqr[4] == player2char && sqr[7] == player2char ||
+                 sqr[2] == player2char && sqr[5] == player2char && sqr[8] == player2char ||
+                 sqr[0] == player2char && sqr[4] == player2char && sqr[8] == player2char ||
+                 sqr[2] == player2char && sqr[4] == player2char && sqr[6] == player2char)
+        {
+            Console.WriteLine("Player 2 wins!");
+            score.Add("player2");
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    static void DrawBoard(char[] sqr)
+    {
+        string divider = "---+---+---";
+        Console.WriteLine($" {sqr[0]} | {sqr[1]} | {sqr[2]}\n{divider}\n {sqr[3]} | {sqr[4]} | {sqr[5]}\n{divider}\n {sqr[6]} | {sqr[7]} | {sqr[8]}\n");
+    }
+
+    static void ResetBoard(char[] sqr)
+    {
+        for (int i = 0; i < sqr.Length; i++)
+        {
+            sqr[i] = (i + 1).ToString()[0];
+        }
+    }
+}
