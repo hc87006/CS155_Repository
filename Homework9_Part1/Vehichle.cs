@@ -92,7 +92,7 @@ namespace Homework9_Part1
 
         public string ToString()
         {
-            return $"eNum: {eNum}, Cylinders: {cylinders}, Owner: {owner}";
+            return $"eNum: {eNum}, Cylinders: {cylinders}, Owner: {GetOwner()}";
         }
     }
 
@@ -138,7 +138,7 @@ namespace Homework9_Part1
 
         public string ToString()
         {
-            return $"eNum: {eNum}, Cylinders: {cylinders}, Owner {owner}, Load Capacity: {loadCapacity}, Tow Capacity: {towCapacity}";
+            return $"eNum: {eNum}, Cylinders: {cylinders}, Owner {GetOwner()}, Load Capacity: {loadCapacity}, Tow Capacity: {towCapacity}";
         }
     }
 }
