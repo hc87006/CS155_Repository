@@ -51,13 +51,13 @@ namespace Homework9_Part1
     {
         protected string eNum;
         protected int cylinders;
-        protected string owner;
+        protected Person owner;
 
         public Vehichle()
         {
             eNum = "";
             cylinders = 0;
-            owner = "";
+            owner = new Person();
         }
 
         public string GetENum()
@@ -82,12 +82,12 @@ namespace Homework9_Part1
 
         public string GetOwner()
         {
-            return owner;
+            return owner.GetName();
         }
 
-        public void SetOwner(string owner)
+        public void SetOwner(string name)
         {
-            this.owner = owner;
+            this.owner.SetName(name);
         }
 
         public string ToString()
@@ -107,7 +107,7 @@ namespace Homework9_Part1
             towCapacity = 0;
         }
 
-        public Truck(string eNum, int cylinders, string owner, double loadCapacity, int towCapacity) : base()
+        public Truck(string eNum, int cylinders, Person owner, double loadCapacity, int towCapacity) : base()
         {
             this.eNum = eNum;
             this.cylinders = cylinders;
